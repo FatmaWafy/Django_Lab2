@@ -1,0 +1,7 @@
+<h1>Classrooms</h1>
+<a href="{% url 'classroom_create' %}">Add New Classroom</a>
+<ul>
+    {% for classroom in classrooms %}
+        <li>{{ classroom.name }} ({{ classroom.school.name }})</li>
+    {% endfor %}
+</ul>

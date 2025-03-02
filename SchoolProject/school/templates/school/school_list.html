@@ -1,0 +1,10 @@
+<h1>Schools</h1>
+<a href="{% url 'school_create' %}">Add New School</a>
+<ul>
+    {% for school in schools %}
+        <li>{{ school.name }} - 
+            <a href="{% url 'school_update' school.id %}">Edit</a> | 
+            <a href="{% url 'school_delete' school.id %}">Delete</a>
+        </li>
+    {% endfor %}
+</ul>
